@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.listViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: teal;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.listViewController">
    <children>
-      <ListView fx:id="myListView" prefHeight="368.0" prefWidth="400.0" />
-      <Button fx:id="btAdicionar" defaultButton="true" layoutX="251.0" layoutY="409.0" mnemonicParsing="false" style="-fx-background-color: green;" text="Adicionar" textAlignment="CENTER">
+      <ListView fx:id="myListView" blendMode="COLOR_BURN" editable="true" layoutX="65.0" layoutY="93.0" prefHeight="275.0" prefWidth="271.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ListView>
+      <Button fx:id="btAdicionar" defaultButton="true" layoutX="226.0" layoutY="445.0" mnemonicParsing="false" onAction="#adicionar" style="-fx-background-color: green;" text="Adicionar" textAlignment="CENTER">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -18,7 +37,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="brRemover" defaultButton="true" layoutX="165.0" layoutY="409.0" mnemonicParsing="false" style="-fx-background-color: red;" text="Remover" textAlignment="CENTER">
+      <Button fx:id="btRemover" defaultButton="true" layoutX="81.0" layoutY="445.0" mnemonicParsing="false" onAction="#remover" style="-fx-background-color: red;" text="Excluir" textAlignment="CENTER">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -26,5 +45,23 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
+      <Label layoutX="108.0" layoutY="38.0" text="Lista de Compras">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="btEditar" defaultButton="true" layoutX="81.0" layoutY="407.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" style="-fx-background-color: grey;" text="Editar" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="textField" blendMode="COLOR_BURN" layoutX="187.0" layoutY="407.0" promptText="ex: &quot;banana&quot;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextField>
    </children>
 </AnchorPane>
