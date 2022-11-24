@@ -26,11 +26,12 @@ public class App extends Application {
         try {
             root = FXMLLoader.load(getClass().getResource("/view/listView.fxml"));
         } catch (Exception e) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, "nao ta rodando", e);
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, "Nao carregou FXML", e);
         }
         setStage(primaryStage);
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 }

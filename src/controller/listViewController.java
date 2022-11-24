@@ -1,12 +1,15 @@
 package controller;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
 public class listViewController implements Initializable{
 
@@ -35,17 +38,16 @@ public class listViewController implements Initializable{
             myListView.refresh();
             textField.clear();
         }
-
-        else{System.out.println("pppp");}
-
+        else{System.out.println("Vazio");}
     }
 
 
     //Delete
     @FXML
     public void remover(ActionEvent event){
-        int index = myListView.getSelectionModel().getSelectedIndex();
-        myListView.getItems().remove(index);
-        myListView.refresh();
+        
+            int index = myListView.getSelectionModel().getSelectedIndex();
+            myListView.getItems().remove(index);
+            myListView.refresh();
     }
 }
