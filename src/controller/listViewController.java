@@ -37,7 +37,6 @@ public class listViewController implements Initializable{
             textField.clear();
         }
         else{System.out.println("pppp");}
-
     }
 
 
