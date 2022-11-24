@@ -1,6 +1,13 @@
 package controller;
+<<<<<<< HEAD
 import java.net.URL;
 import java.util.ResourceBundle;
+=======
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+>>>>>>> d91d551120c3b6407a6133b6f46287cad675914b
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -23,7 +30,12 @@ public class listViewController implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+<<<<<<< HEAD
 
+=======
+        String[] food = {"pizza","banana","maçã"};
+        myListView.getItems().addAll(food);
+>>>>>>> d91d551120c3b6407a6133b6f46287cad675914b
     }
 
 
@@ -36,7 +48,10 @@ public class listViewController implements Initializable{
             myListView.refresh();
             textField.clear();
         }
+<<<<<<< HEAD
         else{System.out.println("pppp");}
+=======
+>>>>>>> d91d551120c3b6407a6133b6f46287cad675914b
 
     }
 
