@@ -8,6 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
@@ -28,42 +29,66 @@
             </DropShadow>
          </effect>
       </ListView>
-      <Button fx:id="btAdicionar" defaultButton="true" layoutX="226.0" layoutY="445.0" mnemonicParsing="false" onAction="#adicionar" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: green;" text="Adicionar" textAlignment="CENTER">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <font>
-            <Font name="Bookshelf Symbol 7" size="13.0" />
-         </font>
-      </Button>
-      <Button fx:id="btRemover" defaultButton="true" layoutX="81.0" layoutY="445.0" mnemonicParsing="false" onAction="#remover" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: red;" text="Excluir" textAlignment="CENTER">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <font>
-            <Font name="Bookshelf Symbol 7" size="13.0" />
-         </font>
-      </Button>
+      <Pane fx:id="gpBotoes" layoutX="81.0" layoutY="407.0">
+         <children>
+            <Button fx:id="btAdicionar" defaultButton="true" layoutX="145.0" layoutY="38.0" mnemonicParsing="false" onAction="#adicionar" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: green;" text="Adicionar" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btRemover" defaultButton="true" layoutY="38.0" mnemonicParsing="false" onAction="#remover" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: red;" text="Excluir" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btEditar" defaultButton="true" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: grey;" text="Editar" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="textField" blendMode="COLOR_BURN" layoutX="106.0" prefHeight="25.0" prefWidth="145.0" promptText="ex: &quot;banana&quot;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
       <Label layoutX="87.0" layoutY="30.0" prefHeight="44.0" prefWidth="228.0" text="Lista de Compras" textAlignment="CENTER">
          <font>
             <Font name="Bradley Hand ITC" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="btEditar" defaultButton="true" layoutX="81.0" layoutY="407.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: grey;" text="Editar" textAlignment="CENTER">
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-         <font>
-            <Font name="Bookshelf Symbol 7" size="13.0" />
-         </font>
-      </Button>
-      <TextField fx:id="textField" blendMode="COLOR_BURN" layoutX="187.0" layoutY="407.0" prefHeight="25.0" prefWidth="145.0" promptText="ex: &quot;banana&quot;">
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor>
-         <font>
-            <Font name="Bookshelf Symbol 7" size="12.0" />
-         </font>
-      </TextField>
+      <AnchorPane fx:id="telaEditar" cache="true" layoutX="71.0" layoutY="392.0" prefHeight="94.0" prefWidth="271.0" visible="false">
+         <children>
+            <TextField fx:id="editField" blendMode="COLOR_BURN" layoutX="34.0" layoutY="20.0" prefHeight="25.0" prefWidth="219.0">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="12.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btConfirmar" defaultButton="true" layoutX="205.0" layoutY="55.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="39.0" style="-fx-background-color: grey;" text="OK" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

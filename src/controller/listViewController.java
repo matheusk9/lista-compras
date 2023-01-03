@@ -9,7 +9,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
 
 public class listViewController implements Initializable{
 
@@ -22,7 +21,17 @@ public class listViewController implements Initializable{
     @FXML
     private Button btEditar;
     @FXML
+    private Button btConfirmar;
+    @FXML
     private TextField textField;
+    @FXML
+    private TextField editField;
+    @FXML
+    private AnchorPane telaEditar;
+    @FXML
+    private AnchorPane telaPrincipal;
+    @FXML
+    private Pane gpBotoes;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -38,16 +47,15 @@ public class listViewController implements Initializable{
             myListView.refresh();
             textField.clear();
         }
-        else{System.out.println("Vazio");}
+        else{System.out.println("pppp");}
     }
 
 
     //Delete
     @FXML
     public void remover(ActionEvent event){
-        
-            int index = myListView.getSelectionModel().getSelectedIndex();
-            myListView.getItems().remove(index);
-            myListView.refresh();
+        int index = myListView.getSelectionModel().getSelectedIndex();
+        myListView.getItems().remove(index);
+        myListView.refresh();
     }
 }
