@@ -10,12 +10,11 @@ import sun.applet.Main;
 
 public class App extends Application {
     public Stage stage;
+    private Parent root = null;
 
     public void setStage(Stage stage) {
         this.stage = stage;
     }
-
-    private Parent root = null;
 
     public static void main(String[] args) throws Exception {
         launch(args);
@@ -26,7 +25,7 @@ public class App extends Application {
         try {
             root = FXMLLoader.load(getClass().getResource("/view/listView.fxml"));
         } catch (Exception e) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, "nao ta rodando", e);
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, "ERRO!", e);
         }
         setStage(primaryStage);
         Scene scene = new Scene(root);
